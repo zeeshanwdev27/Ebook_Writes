@@ -39,7 +39,7 @@ function About() {
       </div>
 
       {/* Right Form */}
-      <img src="/Home/About/about-img.png" className='w-100 h-100 lg:w-180 lg:h-120' alt="ebooks_images" />
+      <img src="/Home/About/about-img.png" className='w-100 h-100 lg:w-120 lg:h-110' alt="ebooks_images" />
 
 
 
