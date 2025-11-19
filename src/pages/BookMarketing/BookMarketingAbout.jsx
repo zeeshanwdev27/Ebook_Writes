@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function BookMarketingAbout() {
   return (
@@ -18,11 +19,13 @@ function BookMarketingAbout() {
 
         <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
           <button className=' cursor-pointer bg-(--main-color) border border-white text-white px-6 py-3 rounded-lg font-semibold   transition duration-300 shadow-lg'>
-            Get A Quote
+            Chat With Us
           </button>
+          <Link to="tel:+5512884168">
           <button className=' cursor-pointer  bg-(--main-color) border-2 border-(--main-color) text-white px-6 py-3 rounded-lg font-semibold hover:bg-transparent hover:border-orange-600  hover:text-black transition duration-300'>
             Talk To An Expert
           </button>
+          </Link>
         </div>
       </div>
 

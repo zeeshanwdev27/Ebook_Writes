@@ -1,5 +1,6 @@
 import React from 'react'
 import HomeBottomSection from './HomeBottomSection';
+import { Link } from "react-router-dom";
 
 function MainHome({title, header, description}) {
   return (
@@ -21,11 +22,13 @@ function MainHome({title, header, description}) {
 
         <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
           <button className=' cursor-pointer bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:border-white hover:text-black transition duration-300 shadow-lg'>
-            Get A Quote
+            Chat With Us
           </button>
+          <Link to="tel:+5512884168">
           <button className=' cursor-pointer  bg-(--main-color) border-2 border-(--main-color) text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:border-white hover:text-black transition duration-300'>
             Talk To An Expert
           </button>
+          </Link>
         </div>
       </div>
 
