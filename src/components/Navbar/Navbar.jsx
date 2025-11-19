@@ -44,11 +44,11 @@ function Navbar() {
 
         {/* Menu - Hidden on small/medium, visible on large */}
         <ul className="hidden lg:flex gap-5 justify-center items-center">
-          <li className="hover:text-gray-600 cursor-pointer transition-colors">
+          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
             <Link to={"/"}>Home</Link>
           </li>
           <li className="relative group cursor-pointer">
-            <span className="hover:text-gray-600 transition-colors">
+            <span className="hover:text-(--main-color) transition-colors">
               Services
             </span>
 
@@ -57,7 +57,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/book-marketing"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-(--main-color)"
                 >
                   Book Marketing
                 </Link>
@@ -65,7 +65,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/book-writing"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-(--main-color)"
                 >
                   Book Writing
                 </Link>
@@ -73,23 +73,23 @@ function Navbar() {
               <li>
                 <Link
                   to="/book-publishing"
-                  className="block px-4 py-2 hover:bg-gray-100"
+                  className="block px-4 py-2 hover:bg-(--main-color)"
                 >
                   Book Publishing
                 </Link>
               </li>
             </ul>
           </li>
-          <li className="hover:text-gray-600 cursor-pointer transition-colors">
+          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
             Portfolio
           </li>
-          <li className="hover:text-gray-600 cursor-pointer transition-colors">
+          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
             Testimonials
           </li>
-          <li className="hover:text-gray-600 cursor-pointer transition-colors">
+          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
             About Us
           </li>
-          <li className="hover:text-gray-600 cursor-pointer transition-colors">
+          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
             Contact Us
           </li>
         </ul>

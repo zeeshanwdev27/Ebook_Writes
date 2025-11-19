@@ -30,7 +30,7 @@ function BookPublishingExperts() {
       icon: <Eye className="w-8 h-8" />,
       title: "Book Marketing",
       description:
-        "Our New York Publishers and marketing team will help you promote your book to the right audience using a combination of traditional and digital marketing strategies. From social media to book tours, we'll help you build your brand and create a loyal following of readers.",
+        "Our EbookWrites Publishers and marketing team will help you promote your book to the right audience using a combination of traditional and digital marketing strategies. From social media to book tours, we'll help you build your brand and create a loyal following of readers.",
       color: "from-purple-500 to-pink-500",
     },
 

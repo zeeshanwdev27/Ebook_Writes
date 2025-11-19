@@ -12,7 +12,7 @@ function Crafting_Captivating() {
         </h1>
 
         <p className='text-slate-700 leading-relaxed'>
-          As a leading publishers in New York, we are committed to excellence in everything we do. Whether you're an established author or a first-time writer, we're here to guide you every step of the way. Let us help you transform your dreams into reality and create a book that will leave a lasting impact on your readers. We also work as a photo book publisher, so if you are considering an all-in-one book publishing experts, we are the one!
+          As a leading publishers in USA, we are committed to excellence in everything we do. Whether you're an established author or a first-time writer, we're here to guide you every step of the way. Let us help you transform your dreams into reality and create a book that will leave a lasting impact on your readers. We also work as a photo book publisher, so if you are considering an all-in-one book publishing experts, we are the one!
         </p>
 
 

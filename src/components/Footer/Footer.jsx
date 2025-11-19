@@ -16,7 +16,7 @@ function Footer() {
               />
             </div>
             <p className="mt-4 text-sm text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0">
-              Design, Code and Ship! We bring your literary visions to life.
+              Write. Design. Publish. Your ebook, perfected.
             </p>
           </div>
 

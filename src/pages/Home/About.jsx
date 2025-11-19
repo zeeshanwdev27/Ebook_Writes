@@ -8,7 +8,7 @@ function About() {
       <div className='flex flex-col gap-6 max-w-lg text-center lg:text-left mb-8 lg:mb-0'>
 
         <h1 className='text-3xl lg:text-4xl font-bold leading-tight'>
-          NY Publishers, where your story comes to life.
+          EbookWrites Publishers, where your story comes to life.
         </h1>
 
         <p className='text-slate-700 leading-relaxed'>
