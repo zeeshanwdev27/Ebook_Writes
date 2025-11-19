@@ -27,7 +27,7 @@ function Crafting_Captivating() {
       </div>
 
       {/* Right Form */}
-      <img src="/Home/Crafting_Captivating/Crafting_Captivating.jpg" className='w-120 h-140' alt="Crafting_Captivating_ebook" />
+      <img src="/Home/Crafting_Captivating/Crafting_Captivating.jpg" className='w-80 h-80 lg:w-120 lg:h-140' alt="Crafting_Captivating_ebook" />
 
 
 

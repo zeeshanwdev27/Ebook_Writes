@@ -5,7 +5,7 @@ function About() {
     <div className='min-h-[70vh] flex flex-col lg:flex-row justify-center items-center py-8 px-4 lg:py-12 lg:gap-40 mx-auto text-black '>
       
       {/* Left Content */}
-      <div className='flex flex-col gap-6 max-w-lg text-center lg:text-left mb-8 lg:mb-0'>
+      <div className='flex flex-col gap-6 max-w-lg lg:text-center lg:text-left mb-8 lg:mb-0'>
 
         <h1 className='text-3xl lg:text-4xl font-semibold leading-tight'>
           Ebook Writes, where your story comes to life.
@@ -39,7 +39,7 @@ function About() {
       </div>
 
       {/* Right Form */}
-      <img src="/Home/About/about-img.png" className='w-180 h-120' alt="ebooks_images" />
+      <img src="/Home/About/about-img.png" className='w-100 h-100 lg:w-180 lg:h-120' alt="ebooks_images" />
 
 
 

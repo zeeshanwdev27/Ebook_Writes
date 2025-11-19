@@ -25,7 +25,7 @@ function Footer() {
           <div className="flex flex-col sm:flex-row flex-grow w-full lg:w-auto justify-between lg:justify-start lg:pl-12 xl:pl-20 mt-8 lg:mt-0">
             {/* About Section */}
             <div className="w-full sm:w-1/2 lg:w-64 px-0 sm:px-4 mb-8 sm:mb-0">
-              <h2 className="mb-4 text-sm font-semibold tracking-widest text-gray-900 uppercase title-font text-center sm:text-left">
+              <h2 className="mb-4 text-sm font-bold tracking-widest text-gray-900 uppercase title-font text-center sm:text-left">
                 About
               </h2>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center sm:text-left">
@@ -35,7 +35,7 @@ function Footer() {
 
             {/* Service Section */}
             <div className="w-full sm:w-1/2 lg:w-64 px-0 sm:px-4 mb-8 sm:mb-0 lg:ml-8 xl:ml-12">
-              <h2 className="mb-4 text-sm font-semibold tracking-widest text-gray-900 uppercase title-font text-center sm:text-left">
+              <h2 className="mb-4 text-sm font-bold tracking-widest text-gray-900 uppercase title-font text-center sm:text-left">
                 Service
               </h2>
               <nav className="list-none">

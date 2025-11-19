@@ -29,7 +29,7 @@ function BookPublishingAbout() {
       </div>
 
       {/* Right Form */}
-      <img src="/Home/About/about-img.png" className='w-180 h-120' alt="ebooks_images" />
+      <img src="/BookPublishing/bookpublishing.png" className='w-100 h-100 lg:w-140 lg:h-120' alt="ebooks_images" />
 
 
 

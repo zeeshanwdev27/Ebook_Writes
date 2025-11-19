@@ -30,7 +30,7 @@ function MainHome({title, header, description}) {
       </div>
 
       {/* Right Form */}
-      <img src="/Home/heroSection_Books.png" className='w-180 h-120' alt="ebooks_images" />
+      <img src="/Home/heroSection_Books.png" className='w-100 h-100 lg:w-180 lg:h-120' alt="ebooks_images" />
 
 
 

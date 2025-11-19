@@ -27,7 +27,7 @@ function BookMarketingAbout() {
       </div>
 
       {/* Right Form */}
-      <img src="/Home/About/about-img.png" className='w-180 h-120' alt="ebooks_images" />
+      <img src="/BookMarketing/bookmarketing.png" className='w-150 h-100 lg:w-180 lg:h-140' alt="ebooks_images" />
 
 
 
