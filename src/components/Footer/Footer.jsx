@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -39,19 +40,19 @@ function Footer() {
               </h2>
               <nav className="list-none">
                 <li className="mt-3">
-                  <a href="#" className="text-gray-600 hover:text-blue-600 cursor-pointer transition-colors duration-200 text-sm flex items-center justify-center sm:justify-start group">
+                  <Link to="/book-marketing" className="text-gray-600 hover:text-(--main-color) cursor-pointer transition-colors duration-200 text-sm flex items-center justify-center sm:justify-start group">
                     Book Marketing
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-3">
-                  <a href="#" className="text-gray-600 hover:text-blue-600 cursor-pointer transition-colors duration-200 text-sm flex items-center justify-center sm:justify-start group">
+                  <Link to="/book-writing" className="text-gray-600 hover:text-(--main-color) cursor-pointer transition-colors duration-200 text-sm flex items-center justify-center sm:justify-start group">
                     Book Writing
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-3">
-                  <a href="#" className="text-gray-600 hover:text-blue-600 cursor-pointer transition-colors duration-200 text-sm flex items-center justify-center sm:justify-start group">
+                  <Link to="/book-publishing" className="text-gray-600 hover:text-(--main-color) cursor-pointer transition-colors duration-200 text-sm flex items-center justify-center sm:justify-start group">
                     Book Publishing
-                  </a>
+                  </Link>
                 </li>
               </nav>
             </div>

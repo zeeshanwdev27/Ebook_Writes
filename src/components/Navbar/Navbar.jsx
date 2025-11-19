@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MbOverlay from "./MbOverlay.jsx";
 import { Link } from "react-router-dom";
+import { ChevronDown, Phone } from "lucide-react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,11 +14,13 @@ function Navbar() {
     <div className="py-5 w-full">
       <div className="flex justify-between items-center px-4 md:px-8 lg:justify-evenly">
         {/* Logo */}
-        <img
-          src="/logo.png"
-          alt="Newyour_Publisher_Logo"
-          className="w-40 h-10"
-        />
+        <Link to={"/"}>
+          <img
+            src="/logo.png"
+            alt="Newyour_Publisher_Logo"
+            className="w-40 h-10"
+          />
+        </Link>
 
         {/* Hamburger Menu for medium and small screens */}
         <button
@@ -48,8 +51,12 @@ function Navbar() {
             <Link to={"/"}>Home</Link>
           </li>
           <li className="relative group cursor-pointer">
-            <span className="hover:text-(--main-color) transition-colors">
+            <span className="hover:text-(--main-color) transition-colors flex items-center gap-1">
               Services
+              <ChevronDown
+                size={16}
+                className="transition-transform group-hover:rotate-180"
+              />
             </span>
 
             {/* Dropdown */}
@@ -57,7 +64,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/book-marketing"
-                  className="block px-4 py-2 hover:bg-(--main-color)"
+                  className="block px-4 py-2 hover:bg-(--main-color) hover:text-white transition-colors"
                 >
                   Book Marketing
                 </Link>
@@ -65,7 +72,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/book-writing"
-                  className="block px-4 py-2 hover:bg-(--main-color)"
+                  className="block px-4 py-2 hover:bg-(--main-color) hover:text-white transition-colors"
                 >
                   Book Writing
                 </Link>
@@ -73,33 +80,31 @@ function Navbar() {
               <li>
                 <Link
                   to="/book-publishing"
-                  className="block px-4 py-2 hover:bg-(--main-color)"
+                  className="block px-4 py-2 hover:bg-(--main-color) hover:text-white transition-colors"
                 >
                   Book Publishing
                 </Link>
               </li>
             </ul>
           </li>
-          {/* <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            Portfolio
-          </li> */}
           <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            <Link to={'/testimonials/'}>Testimonials</Link>
+            <Link to={"/testimonials/"}>Testimonials</Link>
           </li>
           <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            <Link to={'/about-us'}>About Us</Link>
+            <Link to={"/about-us"}>About Us</Link>
           </li>
           <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-             <Link to={'/contact-us/'}>Contact Us</Link>
+            <Link to={"/contact-us/"}>Contact Us</Link>
           </li>
         </ul>
 
         {/* Call To Action - Hidden on small/medium, visible on large */}
-        <div className="hidden lg:flex justify-center items-center gap-5">
-          <button className="hover:text-gray-600 transition-colors">
-            +000000000
+        <div className="hidden lg:flex justify-center items-center gap-4">
+          <button className="flex items-center gap-2  transition-colors duration-200 text-(--main-color) border border-(--main-color) px-2 py-3 rounded-md hover:bg-(--main-color) hover:text-white">
+            <Phone size={16} />
+            +000 000 0000
           </button>
-          <button className="p-3 rounded-md border hover:bg-gray-50 transition-colors">
+          <button className="px-6 py-3 rounded-md border border-(--main-color) bg-(--main-color) text-white hover:bg-transparent hover:text-(--main-color) transition-all duration-200 font-medium">
             Chat With Us
           </button>
         </div>
