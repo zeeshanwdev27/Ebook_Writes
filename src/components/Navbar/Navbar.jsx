@@ -87,10 +87,10 @@ function Navbar() {
             <Link to={'/testimonials/'}>Testimonials</Link>
           </li>
           <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            About Us
+            <Link to={'/about-us'}>About Us</Link>
           </li>
           <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            Contact Us
+             <Link to={'/contact-us/'}>Contact Us</Link>
           </li>
         </ul>
 

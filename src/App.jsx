@@ -7,6 +7,10 @@ const BookMarketing = React.lazy(()=> import('./pages/BookMarketing/BookMarketin
 const BookWriting = React.lazy(()=> import('./pages/BookWriting/BookWriting.jsx'))
 const BookPublishing = React.lazy(()=> import('./pages/BookPublishing/BookPublishing.jsx'))
 const Testimonials = React.lazy(()=> import('./pages/Testimonials/Testimonials.jsx'))
+const AboutUs = React.lazy(()=> import('./pages/AboutUs/AboutUs.jsx'))
+const ContactUs = React.lazy(()=> import('./pages/ContactUs/ContactUs.jsx'))
+
+
 
 const App = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +22,8 @@ const App = createBrowserRouter(
         <Route path="/book-writing" element={<BookWriting />} />
         <Route path="/book-publishing" element={<BookPublishing />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         
       </Route>
     </>
