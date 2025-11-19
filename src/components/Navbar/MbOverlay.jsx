@@ -199,15 +199,15 @@ function MbOverlay({ isOpen, setIsOpen }) {
             {/* Optional: Call to Action Buttons */}
             <div className="flex-shrink-0 p-4 border-t border-gray-100 space-y-3 w-full md:max-w-2xl md:mx-auto">
               <Link
-                to="/contact-us"
+               to="tel:+5512884168"
                 onClick={handleLinkClick}
                 className="flex items-center justify-center gap-2 w-full p-4 bg-gradient-to-r from-orange-600 to-orange-600 hover:from-orange-700 hover:to-orange-700 text-white rounded-xl font-semibold transition-all duration-300 active:scale-95"
               >
                 <Phone className="w-5 h-5" />
-                +1 (917) 765-8780
+                +551-288-4168
               </Link>
               <Link
-                to="/get-quote"
+                to="#"
                 onClick={handleLinkClick}
                 className="flex items-center justify-center gap-2 w-full p-4 border-2 border-orange-600 text-orange-600 hover:bg-indigo-50 rounded-xl font-semibold transition-all duration-300 active:scale-95"
               >

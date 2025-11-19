@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { MapPin, Phone, Mail } from 'lucide-react'
 
 function Footer() {
   return (
@@ -16,9 +17,26 @@ function Footer() {
                 className='w-32 h-8 sm:w-40 sm:h-10 lg:w-48 lg:h-12' 
               />
             </div>
+            
             <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0">
               Write. Design. Publish. Your ebook, perfected.
             </p>
+            
+            {/* Contact Info with Icons */}
+            <div className="mt-4 space-y-2 max-w-md mx-auto lg:mx-0">
+              <div className="flex  justify-center lg:justify-start text-sm sm:text-sm text-gray-600">
+                <MapPin className="w-4 h-4 mr-2 shrink-0 mt-1" />
+                <span>18211 Dalyell Dr, Richmond, TX 77407</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start text-sm sm:text-sm text-gray-600">
+                <Phone className="w-4 h-4 mr-2 shrink-0" />
+                <span>551-288-4168</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start text-sm sm:text-sm text-gray-600">
+                <Mail className="w-4 h-4 mr-2 shrink-0" />
+                <Link to={"mailto:info@ebookwrites.com"} className="underline" >Info@ebookwrites.com</Link>
+              </div>
+            </div>
           </div>
 
           {/* Links Sections */}
@@ -40,17 +58,17 @@ function Footer() {
               </h2>
               <nav className="list-none">
                 <li className="mt-3">
-                  <Link to="/book-marketing" className="text-gray-600 hover:text-(--main-color) cursor-pointer transition-colors duration-200 text-sm sm:text-base flex items-center justify-center sm:justify-start group">
+                  <Link to="/book-marketing" className="text-gray-600 hover:text-blue-600 cursor-pointer transition-colors duration-200 text-sm sm:text-base flex items-center justify-center sm:justify-start group">
                     Book Marketing
                   </Link>
                 </li>
                 <li className="mt-3">
-                  <Link to="/book-writing" className="text-gray-600 hover:text-(--main-color) cursor-pointer transition-colors duration-200 text-sm sm:text-base flex items-center justify-center sm:justify-start group">
+                  <Link to="/book-writing" className="text-gray-600 hover:text-blue-600 cursor-pointer transition-colors duration-200 text-sm sm:text-base flex items-center justify-center sm:justify-start group">
                     Book Writing
                   </Link>
                 </li>
                 <li className="mt-3">
-                  <Link to="/book-publishing" className="text-gray-600 hover:text-(--main-color) cursor-pointer transition-colors duration-200 text-sm sm:text-base flex items-center justify-center sm:justify-start group">
+                  <Link to="/book-publishing" className="text-gray-600 hover:text-blue-600 cursor-pointer transition-colors duration-200 text-sm sm:text-base flex items-center justify-center sm:justify-start group">
                     Book Publishing
                   </Link>
                 </li>

@@ -152,8 +152,8 @@ function Navbar() {
 
         {/* Call To Action - Hidden on small/medium, visible on large */}
         <div className="hidden lg:flex justify-center items-center gap-4">
-          <a
-            href="#"
+          <Link
+            to="tel:+5512884168"
             className="group flex items-center gap-3 px-5 py-3 rounded-md  border border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-lg"
           >
             <div className="relative">
@@ -161,9 +161,9 @@ function Navbar() {
               <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-orange-400 rounded-full animate-ping"></div>
             </div>
             <span className="text-orange-500  font-semibold text-sm">
-              +1 (917) 765-8780
+              +551-288-4168
             </span>
-          </a>
+          </Link>
           <button className="cursor-pointer px-6 py-3 rounded-md border border-(--main-color) bg-(--main-color) text-white hover:bg-transparent hover:text-(--main-color) transition-all duration-200 font-medium">
             Chat With Us
           </button>
