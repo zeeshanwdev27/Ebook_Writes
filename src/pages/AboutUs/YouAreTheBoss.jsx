@@ -50,7 +50,7 @@ function YouAreTheBoss() {
             className="space-y-8"
           >
             {/* Writers Section */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-orange-100">
               <div className="flex items-center gap-3 mb-6">
                 <PenTool className="w-8 h-8 text-(--main-color)" />
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
@@ -87,7 +87,7 @@ function YouAreTheBoss() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100"
+              className="bg-white rounded-2xl shadow-xl p-8 border border-orange-100"
             >
               <div className="flex items-center gap-3 mb-6">
                 <Star className="w-8 h-8 text-(--main-color)" />
@@ -106,7 +106,7 @@ function YouAreTheBoss() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-green-100"
+            className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-orange-100"
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {genres.map((genre, index) => (
@@ -116,9 +116,7 @@ function YouAreTheBoss() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.6 + index * 0.05 }}
                   whileHover={{ scale: 1.05, backgroundColor: "#f0f9ff" }}
-                  className={`p-4 rounded-xl border border-orange-200 text-center transition-all duration-200 ${
-                    genre ? "bg-orange-50 hover:bg-orange-100" : "bg-transparent"
-                  }`}
+                  className={`p-4 rounded-xl border border-orange-200 text-center bg-orange-100 `}
                 >
                   {genre && (
                     <span className="text-gray-800 font-medium text-sm sm:text-base">

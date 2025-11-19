@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MbOverlay from "./MbOverlay.jsx";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Phone } from "lucide-react";
 
 function Navbar() {
@@ -47,9 +47,18 @@ function Navbar() {
 
         {/* Menu - Hidden on small/medium, visible on large */}
         <ul className="hidden lg:flex gap-5 justify-center items-center">
-          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            <Link to={"/"}>Home</Link>
+          <li className="cursor-pointer transition-colors">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-(--main-color)" : "hover:text-(--main-color)"
+              }
+            >
+              Home
+            </NavLink>
           </li>
+
+          {/* Services Dropdown */}
           <li className="relative group cursor-pointer">
             <span className="hover:text-(--main-color) transition-colors flex items-center gap-1">
               Services
@@ -59,42 +68,85 @@ function Navbar() {
               />
             </span>
 
-            {/* Dropdown */}
             <ul className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-48 z-50">
               <li>
-                <Link
+                <NavLink
                   to="/book-marketing"
-                  className="block px-4 py-2 hover:bg-(--main-color) hover:text-white transition-colors"
+                  className={({ isActive }) =>
+                    `block px-4 py-2 transition-colors ${
+                      isActive
+                        ? "bg-(--main-color) text-white"
+                        : "hover:bg-(--main-color) hover:text-white"
+                    }`
+                  }
                 >
                   Book Marketing
-                </Link>
+                </NavLink>
               </li>
+
               <li>
-                <Link
+                <NavLink
                   to="/book-writing"
-                  className="block px-4 py-2 hover:bg-(--main-color) hover:text-white transition-colors"
+                  className={({ isActive }) =>
+                    `block px-4 py-2 transition-colors ${
+                      isActive
+                        ? "bg-(--main-color) text-white"
+                        : "hover:bg-(--main-color) hover:text-white"
+                    }`
+                  }
                 >
                   Book Writing
-                </Link>
+                </NavLink>
               </li>
+
               <li>
-                <Link
+                <NavLink
                   to="/book-publishing"
-                  className="block px-4 py-2 hover:bg-(--main-color) hover:text-white transition-colors"
+                  className={({ isActive }) =>
+                    `block px-4 py-2 transition-colors ${
+                      isActive
+                        ? "bg-(--main-color) text-white"
+                        : "hover:bg-(--main-color) hover:text-white"
+                    }`
+                  }
                 >
                   Book Publishing
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </li>
-          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            <Link to={"/testimonials/"}>Testimonials</Link>
+
+          <li className="cursor-pointer transition-colors">
+            <NavLink
+              to="/testimonials/"
+              className={({ isActive }) =>
+                isActive ? "text-(--main-color)" : "hover:text-(--main-color)"
+              }
+            >
+              Testimonials
+            </NavLink>
           </li>
-          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            <Link to={"/about-us"}>About Us</Link>
+
+          <li className="cursor-pointer transition-colors">
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) =>
+                isActive ? "text-(--main-color)" : "hover:text-(--main-color)"
+              }
+            >
+              About Us
+            </NavLink>
           </li>
-          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            <Link to={"/contact-us/"}>Contact Us</Link>
+
+          <li className="cursor-pointer transition-colors">
+            <NavLink
+              to="/contact-us/"
+              className={({ isActive }) =>
+                isActive ? "text-(--main-color)" : "hover:text-(--main-color)"
+              }
+            >
+              Contact Us
+            </NavLink>
           </li>
         </ul>
 

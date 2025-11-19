@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react'
 import { Outlet } from "react-router-dom"
 import Navbar from '../components/Navbar/Navbar.jsx'
-// import Footer from '../components/Footer.jsx'
 import ScrollToTop from '../ScrollToTop/ScrollToTop.jsx'
 import Footer from '../components/Footer/Footer.jsx'
 

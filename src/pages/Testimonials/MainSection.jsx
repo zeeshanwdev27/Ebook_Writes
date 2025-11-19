@@ -6,12 +6,12 @@ function MainSection() {
 
   const dummyData = [
     {
-      title: "John S",
+      title: "John S.",
       description:
         "Working with Ebook Writes was an incredible experience. They turned my manuscript into a masterpiece, and their marketing team helped me reach a wider audience. I highly recommend them to any author who wants to take their book to the next level.",
     },
     {
-      title: "Maria C",
+      title: "Maria C.",
       description:
         "Ebook Writes is the best in the business. They provided me with a comprehensive publishing solution, from writing to marketing, and made the entire process seamless. I'm thrilled with the results and would definitely work with them again.",
     },
