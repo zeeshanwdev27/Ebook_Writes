@@ -13,79 +13,29 @@ function MbOverlay({ isOpen, setIsOpen }) {
 
   const menuItems = [
     { 
-      text: "CREATIVE", 
+      text: "Home", 
+      path: "/"
+    },
+    { 
+      text: "Services", 
       submenu: [
-        { text: "Articles & Blogs", path: "/articles-blogs" },
-        { text: "Books", path: "/books" },
-        { text: "Business Writing", path: "/business-writing" },
-        { text: "Editing Service", path: "/editing" },
-        { text: "Personal Writing", path: "/personal-writing" }
+        { text: "Book Marketing", path: "/book-marketing" },
+        { text: "Book Writing", path: "/book-writing" },
+        { text: "Book Publishing", path: "/book-publishing" },
       ]
     },
     { 
-      text: "WRITERS", 
-      submenu: [
-        { text: "Content Writers", path: "/content-writers" },
-        { text: "Technical Writers", path: "/technical-writers" },
-        { text: "Creative Writers", path: "/creative-writers" },
-        { text: "SEO Writers", path: "/seo-writers" }
-      ]
+      text: "Testimonials", 
+      path: "/testimonials"
     },
     { 
-      text: "DIGITAL SOLUTION", 
-      submenu: [
-        { text: "Web Design", path: "/web-design" },
-        { text: "Digital Marketing", path: "/digital-marketing" },
-        { text: "SEO Optimization", path: "/seo" },
-        { text: "Social Media Management", path: "/social-media" }
-      ]
+      text: "About Us", 
+      path: "/about-us"
     },
     { 
-      text: "DESIGN", 
-      submenu: [
-        { text: "Graphic Design", path: "/graphic-design" },
-        { text: "UI/UX Design", path: "/ui-ux-design" },
-        { text: "Brand Identity", path: "/brand-identity" },
-        { text: "Print Design", path: "/print-design" }
-      ]
+      text: "Contact Us", 
+      path: "/contact-us"
     },
-    { 
-      text: "MARKETING", 
-      submenu: [
-        { text: "Content Marketing", path: "/content-marketing" },
-        { text: "Social Media Marketing", path: "/social-media-marketing" },
-        { text: "Email Marketing", path: "/email-marketing" },
-        { text: "Marketing Strategy", path: "/marketing-strategy" }
-      ]
-    },
-    { 
-      text: "SOCIAL MEDIA", 
-      submenu: [
-        { text: "Social Media Management", path: "/social-management" },
-        { text: "Content Creation", path: "/social-content" },
-        { text: "Community Management", path: "/community-management" },
-        { text: "Analytics & Reporting", path: "/social-analytics" }
-      ]
-    },
-    { 
-      text: "SEO", 
-      submenu: [
-        { text: "On-Page SEO", path: "/on-page-seo" },
-        { text: "Off-Page SEO", path: "/off-page-seo" },
-        { text: "Technical SEO", path: "/technical-seo" },
-        { text: "Local SEO", path: "/local-seo" }
-      ]
-    },
-    { 
-      text: "INDUSTRIES", 
-      submenu: [
-        { text: "Healthcare", path: "/healthcare" },
-        { text: "Technology", path: "/technology" },
-        { text: "E-commerce", path: "/ecommerce" },
-        { text: "Education", path: "/education" },
-        { text: "Finance", path: "/finance" }
-      ]
-    }
   ];
 
   // Animation variants
@@ -156,6 +106,11 @@ function MbOverlay({ isOpen, setIsOpen }) {
     }
   };
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+    setActiveSubmenu(null);
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -179,10 +134,7 @@ function MbOverlay({ isOpen, setIsOpen }) {
             {/* Header */}
             <div className="flex-shrink-0 flex items-center justify-end p-3 border-b border-gray-100">
               <button
-                onClick={() => {
-                  setIsOpen(false);
-                  setActiveSubmenu(null);
-                }}
+                onClick={handleLinkClick}
                 className="mt-1 p-3 rounded-2xl bg-gradient-to-r from-gray-50 to-gray-100/50 hover:from-indigo-50 hover:to-purple-50/30 border border-gray-200/60 hover:border-indigo-200 transition-all duration-300 active:scale-95 mr-4"
               >
                 <X className="w-5 h-5 text-gray-700" />
@@ -194,45 +146,74 @@ function MbOverlay({ isOpen, setIsOpen }) {
               <div className="p-4 space-y-1 w-full">
                 {menuItems.map((item, index) => (
                   <div key={index} className="border-b border-gray-100 last:border-b-0 w-full">
-                    {/* Main Menu Item */}
-                    <button
-                      onClick={() => handleSubmenuToggle(item.text)}
-                      className="flex items-center justify-between w-full p-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 group"
-                    >
-                      <span className="text-gray-800 group-hover:text-indigo-700 font-semibold text-base whitespace-nowrap overflow-hidden text-ellipsis">
-                        {item.text}
-                      </span>
-                      <ChevronRight className={`w-5 h-5 text-gray-400 group-hover:text-indigo-600 transition-transform duration-300 flex-shrink-0 ${
-                        activeSubmenu === item.text ? 'rotate-90' : ''
-                      }`} />
-                    </button>
+                    {item.submenu ? (
+                      // Menu item with submenu
+                      <>
+                        <button
+                          onClick={() => handleSubmenuToggle(item.text)}
+                          className="flex items-center justify-between w-full p-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 group"
+                        >
+                          <span className="text-gray-800 group-hover:text-indigo-700 font-semibold text-base whitespace-nowrap overflow-hidden text-ellipsis">
+                            {item.text}
+                          </span>
+                          <ChevronRight className={`w-5 h-5 text-gray-400 group-hover:text-indigo-600 transition-transform duration-300 flex-shrink-0 ${
+                            activeSubmenu === item.text ? 'rotate-90' : ''
+                          }`} />
+                        </button>
 
-                    {/* Submenu */}
-                    {activeSubmenu === item.text && (
-                      <div className="pl-4 pr-4 pb-3 space-y-2 w-full">
-                        {item.submenu.map((subItem, subIndex) => (
-                          <Link
-                            key={subIndex}
-                            to={subItem.path}
-                            onClick={() => {
-                              setIsOpen(false);
-                              setActiveSubmenu(null);
-                            }}
-                            className="block p-3 rounded-lg bg-gray-50 hover:bg-indigo-100 border border-gray-100 hover:border-indigo-200 transition-all duration-300 group w-full"
-                          >
-                            <span className="text-gray-700 group-hover:text-indigo-700 font-medium text-sm whitespace-nowrap overflow-hidden text-ellipsis">
-                              {subItem.text}
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
+                        {/* Submenu */}
+                        {activeSubmenu === item.text && (
+                          <div className="pl-4 pr-4 pb-3 space-y-2 w-full">
+                            {item.submenu.map((subItem, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                to={subItem.path}
+                                onClick={handleLinkClick}
+                                className="block p-3 rounded-lg bg-gray-50 hover:bg-indigo-100 border border-gray-100 hover:border-indigo-200 transition-all duration-300 group w-full"
+                              >
+                                <span className="text-gray-700 group-hover:text-indigo-700 font-medium text-sm whitespace-nowrap overflow-hidden text-ellipsis">
+                                  {subItem.text}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      // Regular menu item without submenu
+                      <Link
+                        to={item.path}
+                        onClick={handleLinkClick}
+                        className="flex items-center justify-between w-full p-4 rounded-xl hover:bg-indigo-50 transition-all duration-300 group"
+                      >
+                        <span className="text-gray-800 group-hover:text-indigo-700 font-semibold text-base whitespace-nowrap overflow-hidden text-ellipsis">
+                          {item.text}
+                        </span>
+                      </Link>
                     )}
                   </div>
                 ))}
               </div>
             </div>
 
-
+            {/* Optional: Call to Action Buttons */}
+            <div className="flex-shrink-0 p-4 border-t border-gray-100 space-y-3">
+              <Link
+                to="/contact-us"
+                onClick={handleLinkClick}
+                className="flex items-center justify-center gap-2 w-full p-4 bg-gradient-to-r from-orange-600 to-orange-600 hover:from-orange-700 hover:to-orange-700 text-white rounded-xl font-semibold transition-all duration-300 active:scale-95"
+              >
+                <Phone className="w-5 h-5" />
+                +1 (917) 765-8780
+              </Link>
+              <Link
+                to="/get-quote"
+                onClick={handleLinkClick}
+                className="flex items-center justify-center gap-2 w-full p-4 border-2 border-orange-600 text-orange-600 hover:bg-indigo-50 rounded-xl font-semibold transition-all duration-300 active:scale-95"
+              >
+                Chat With Us
+              </Link>
+            </div>
           </motion.div>
         </motion.div>
       )}

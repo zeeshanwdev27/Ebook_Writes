@@ -12,7 +12,7 @@ function BookMarketingAbout() {
         </h1>
 
         <p className='text-slate-700 leading-relaxed'>
-          Here at NY Publishers, we know that each work is different and requires its own special approach to promotion. Thus, we take time to learn about your book’s assets, weaknesses, and intended audience as part of our book promotion services. Informed by this research, we craft a comprehensive strategy that employs both classic and cutting-edge channels to give your work the widest possible audience. Book evaluations, social media campaigns, email marketing, author interviews, and more are all possible components of the individualized plans we create for our clients. In order to get your book in front of the right eye at the right moment, our marketing experts will work closely with you to create a unique plan of action.
+          Here at Ebook Writes, we know that each work is different and requires its own special approach to promotion. Thus, we take time to learn about your book’s assets, weaknesses, and intended audience as part of our book promotion services. Informed by this research, we craft a comprehensive strategy that employs both classic and cutting-edge channels to give your work the widest possible audience. Book evaluations, social media campaigns, email marketing, author interviews, and more are all possible components of the individualized plans we create for our clients. In order to get your book in front of the right eye at the right moment, our marketing experts will work closely with you to create a unique plan of action.
         </p>
 
 

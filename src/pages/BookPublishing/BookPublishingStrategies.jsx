@@ -9,7 +9,7 @@ function BookPublishingStrategies() {
       icon: <Layers  className="w-8 h-8" />,
       title: "Widespread Expertise",
       description:
-        "With NyPublishers.com, the sky is your limit. Our publishing team know your industry and its standards. Whatever genre your book belongs too, we get your book published it meeting the high standards of your niche.",
+        "Our publishing team know your industry and its standards. Whatever genre your book belongs too, we get your book published it meeting the high standards of your niche.",
       color: "from-blue-500 to-cyan-500",
     },
     {

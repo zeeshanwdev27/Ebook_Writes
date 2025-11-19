@@ -9,7 +9,7 @@ import ContactForm from './ContactForm.jsx'
 function Home() {
   return (
     <>
-    <MainHome title="Your Story. Our Expertise" header="Book Publishers in US – A Bestseller Awaits." description="As experts in book writing, publishing, and marketing, Ebookwrites Publishers is your one-stop shop for all your book publishing services needs. We offer end-to-end solutions that will help you transform your manuscript into a bestseller, leaving a lasting impact on your readers. With personalized pricing packages and discount bundles you can get the best of what you desire!" />
+    <MainHome title="Your Story. Our Expertise" header="Book Publishers in USA – A Bestseller Awaits." description="As experts in book writing, publishing, and marketing, Ebook Writes is your one-stop shop for all your book publishing services needs. We offer end-to-end solutions that will help you transform your manuscript into a bestseller, leaving a lasting impact on your readers. With personalized pricing packages and discount bundles you can get the best of what you desire!" />
     <About/>
     <BookPublishingExperts/>
     <Crafting_Captivating/>

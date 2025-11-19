@@ -27,65 +27,65 @@ function AboutUsStrategies() {
       icon: <LayoutTemplate className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Elevating Your Book with Expert Formatting and Design",
       description: "We add the finishing touches to your manuscript by formatting it extensively and designing it to make it visually appealing.",
-      color: "from-gray-500 to-gray-500",
+      color: "from-gray-500 to-gray-700",
     },
     {
       icon: <Megaphone className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />,
       title: "Publishing, Branding, Marketing, and Promotion",
       description: "We help you publish your book in your desired format and market it to your target audience to maximize its potential.",
-      color: "from-orange-500 to-orange-500",
+      color: "from-orange-500 to-red-500",
     },
   ];
 
   return (
-    <div className="flex flex-col items-center w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gray-50 text-white">
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl">
-        {cardsData.map((data, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{
-              scale: 1.02,
-              y: -5,
-              transition: { duration: 0.2 },
-            }}
-            className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-2xl border border-gray-100 p-4 sm:p-6 lg:p-8 flex flex-col gap-4 sm:gap-6 transition-all duration-300 min-h-[280px] sm:min-h-[320px]"
-          >
-            {/* Background Gradient Effect */}
-            <div
-              className={`absolute inset-0 bg-gradient-to-br ${data.color} opacity-0 group-hover:opacity-5 rounded-2xl sm:rounded-3xl transition-opacity duration-300`}
-            />
-
-            {/* Icon */}
-            <div
-              className={`inline-flex p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-r ${data.color} text-white shadow-lg group-hover:scale-110 transition-transform duration-300 w-fit`}
+    <div className="w-full bg-gray-50 py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8">
+          {cardsData.map((data, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{
+                scale: 1.02,
+                y: -5,
+                transition: { duration: 0.2 },
+              }}
+              className="group relative bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl border border-gray-200 p-6 sm:p-8 flex flex-col gap-4 sm:gap-5 transition-all duration-300 min-h-[300px] sm:min-h-[320px] lg:min-h-[340px]"
             >
-              {data.icon}
-            </div>
+              {/* Background Gradient Effect */}
+              <div className={`absolute inset-0 bg-linear-to-br ${data.color} opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl transition-opacity duration-300`}
+              />
 
-            {/* Content */}
-            <div className="flex flex-col gap-3 sm:gap-4 flex-1">
-              <h3 className="text-lg sm:text-xl lg:text-lg font-bold text-gray-900 group-hover:text-gray-800 transition-colors leading-tight">
-                {data.title}
-              </h3>
+              {/* Icon */}
+              <div className={`inline-flex p-3 rounded-lg sm:rounded-xl bg-linear-to-r ${data.color} text-white shadow-lg group-hover:scale-105 transition-transform duration-300 w-fit`}
+              >
+                {data.icon}
+              </div>
 
-              <p className="text-gray-600 leading-relaxed text-sm sm:text-base flex-1">
-                {data.description}
-              </p>
-            </div>
+              {/* Content */}
+              <div className="flex flex-col gap-3 sm:gap-4 flex-1">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-gray-800 transition-colors leading-tight">
+                  {data.title}
+                </h3>
 
-            {/* Hover Border Effect */}
-            <div
-              className={`absolute inset-0 rounded-2xl sm:rounded-3xl border-2 border-transparent bg-gradient-to-r ${data.color} bg-clip-border opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}
-            >
-              <div className="rounded-2xl sm:rounded-3xl bg-white w-full h-full" />
-            </div>
-          </motion.div>
-        ))}
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base flex-1">
+                  {data.description}
+                </p>
+              </div>
+
+              {/* Hover Border Effect */}
+              <div
+                className={`absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent bg-gradient-to-r ${data.color} bg-clip-border opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}
+              >
+                <div className="rounded-xl sm:rounded-2xl bg-white w-full h-full" />
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

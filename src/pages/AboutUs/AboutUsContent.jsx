@@ -12,7 +12,7 @@ function AboutUsContent() {
         </h1>
 
         <p className='text-slate-700 leading-relaxed'>
-          As avid believers in the power of storytelling, we at EbookWrites are dedicated to helping you achieve your writing and publication dreams. Whether you want to share your personal journey, craft a captivating work of fiction, or delve into a historical topic, our passionate book enthusiasts will refine your experience word by word.
+          As avid believers in the power of storytelling, we at Ebook Writes are dedicated to helping you achieve your writing and publication dreams. Whether you want to share your personal journey, craft a captivating work of fiction, or delve into a historical topic, our passionate book enthusiasts will refine your experience word by word.
         </p>
 
         <p className='text-slate-700 leading-relaxed'>

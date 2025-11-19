@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles, Eye , Layers} from "lucide-react";
+import { Edit3 , Megaphone  , Layers, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 
 function BookPublishingExperts() {
@@ -13,24 +13,24 @@ function BookPublishingExperts() {
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <Sparkles  className="w-8 h-8" />,
+      icon: <Edit3   className="w-8 h-8" />,
       title: "Book Editing",
       description:
         "Our professional editors will polish your manuscript to perfection, ensuring it's free of errors and reads smoothly. We'll also review your story to provide you with feedback and suggestions, helping you take it to the next level.",
       color: "from-green-500 to-emerald-500",
     },
     {
-      icon: <Eye className="w-8 h-8" />,
+      icon: <BookOpen  className="w-8 h-8" />,
       title: "Book Publishing",
       description:
         "Our self publishers take care of all aspects of book publishing, from designing a beautiful cover to formatting your manuscript for print and digital formats. With our global distribution network, your book will be available to readers worldwide.",
-      color: "from-purple-500 to-pink-500",
+      color: "from-orange-500 to-orange-500",
     },
     {
-      icon: <Eye className="w-8 h-8" />,
+      icon: <Megaphone  className="w-8 h-8" />,
       title: "Book Marketing",
       description:
-        "Our EbookWrites Publishers and marketing team will help you promote your book to the right audience using a combination of traditional and digital marketing strategies. From social media to book tours, we'll help you build your brand and create a loyal following of readers.",
+        "Our Publishers and marketing team will help you promote your book to the right audience using a combination of traditional and digital marketing strategies. From social media to book tours, we'll help you build your brand and create a loyal following of readers.",
       color: "from-purple-500 to-pink-500",
     },
 

@@ -8,32 +8,32 @@ function MainSection() {
     {
       title: "John S",
       description:
-        "Working with EbookWrites was an incredible experience. They turned my manuscript into a masterpiece, and their marketing team helped me reach a wider audience. I highly recommend them to any author who wants to take their book to the next level.",
+        "Working with Ebook Writes was an incredible experience. They turned my manuscript into a masterpiece, and their marketing team helped me reach a wider audience. I highly recommend them to any author who wants to take their book to the next level.",
     },
     {
       title: "Maria C",
       description:
-        "EbookWrites is the best in the business. They provided me with a comprehensive publishing solution, from writing to marketing, and made the entire process seamless. I'm thrilled with the results and would definitely work with them again.",
+        "Ebook Writes is the best in the business. They provided me with a comprehensive publishing solution, from writing to marketing, and made the entire process seamless. I'm thrilled with the results and would definitely work with them again.",
     },
     {
       title: "David W.",
       description:
-        "I've worked with several publishing companies in the past, but EbookWrites stands out for their exceptional quality and attention to detail. Their editors are top-notch, and their marketing strategies are highly effective. I couldn't be happier with the outcome.",
+        "I've worked with several publishing companies in the past, but Ebook Writes stands out for their exceptional quality and attention to detail. Their editors are top-notch, and their marketing strategies are highly effective. I couldn't be happier with the outcome.",
     },
     {
       title: "Jessica L.",
       description:
-        "EbookWrites helped me achieve my dream of becoming a published author. They were with me every step of the way, providing valuable feedback and support. I highly recommend their self publishing services to anyone who wants to turn their manuscript into a bestseller.",
+        "Ebook Writes helped me achieve my dream of becoming a published author. They were with me every step of the way, providing valuable feedback and support. I highly recommend their self publishing services to anyone who wants to turn their manuscript into a bestseller.",
     },
     {
       title: "Peter M.",
       description:
-        "I was blown away by the level of professionalism and expertise at EbookWrites. Their team of writers, editors, and designers worked seamlessly to create a beautiful book that exceeded my expectations. I can't thank them enough for their hard work and dedication.",
+        "I was blown away by the level of professionalism and expertise at Ebook Writes. Their team of writers, editors, and designers worked seamlessly to create a beautiful book that exceeded my expectations. I can't thank them enough for their hard work and dedication.",
     },
     {
       title: "Sarah R.",
       description:
-        "EbookWrites provided me with a stress-free publishing experience. They handled everything from book design to marketing, allowing me to focus on what I do best - writing. I'm grateful for their expertise and highly recommend them to anyone who wants to publish a book.",
+        "Ebook Writes provided me with a stress-free publishing experience. They handled everything from book design to marketing, allowing me to focus on what I do best - writing. I'm grateful for their expertise and highly recommend them to anyone who wants to publish a book.",
     },
   ];
 
@@ -61,7 +61,7 @@ function MainSection() {
           What Our Clients Say
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-          Discover why authors trust EbookWrites for their publishing journey
+          Discover why authors trust Ebook Writes for their publishing journey
         </p>
       </motion.div>
 

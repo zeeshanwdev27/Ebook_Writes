@@ -1,29 +1,28 @@
 import React from "react";
-import { Sparkles, Eye , Layers} from "lucide-react";
+import { HandHeart , MessageCircle , Users  } from "lucide-react";
 import { motion } from "framer-motion";
 
 function BookMarketingStrategies() {
-    
   const cardsData = [
     {
-      icon: <Layers  className="w-8 h-8" />,
+      icon: <Users  className="w-8 h-8" />,
       title: "Together through Thick and Thins",
       description:
-        "With years of practice in the publishing industry, NY Publishers has garnered expertise and knowledge to help you navigate the complex world of offline and online book marketing. Our marketing professionals stay relevant with latest trends and best practices to ensure that your book receives the attention it deserves.",
+        "With years of practice in the publishing industry, Ebook Writes has garnered expertise and knowledge to help you navigate the complex world of offline and online book marketing. Our marketing professionals stay relevant with latest trends and best practices to ensure that your book receives the attention it deserves.",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <Sparkles  className="w-8 h-8" />,
+      icon: <HandHeart  className="w-8 h-8" />,
       title: "Personalized Attention to Your Needs",
       description:
         "Our team of marketing experts takes the time to get to know you and your book, and we work with you every step of the way to develop a customized marketing plan that meets your specific needs. We also offer customized packages and affordable bundles in different seasons. Keep in touch with us.",
       color: "from-green-500 to-emerald-500",
     },
     {
-      icon: <Eye className="w-8 h-8" />,
+      icon: <MessageCircle  className="w-8 h-8" />,
       title: "Open Communication and Collaboration",
       description:
-        "At NY Publishers, we believe that open communication and collaboration are key to a successful book marketing campaign. We keep you informed throughout the process, providing regular updates on the progress of your marketing campaign, unlike other book marketing companies. We remain in close contact, so you can request adjustments as needed. Our goal is to ensure that you feel",
+        "We believe that open communication and collaboration are key to a successful book marketing campaign. We keep you informed throughout the process, providing regular updates on the progress of your marketing campaign, unlike other book marketing companies. We remain in close contact, so you can request adjustments as needed. Our goal is to ensure that you feel",
       color: "from-purple-500 to-pink-500",
     },
   ];
@@ -32,16 +31,12 @@ function BookMarketingStrategies() {
     <div className="flex flex-col items-center w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-gray-50 text-white">
       {/* Header Section */}
       <div className="text-center mb-12 sm:mb-16 lg:mb-20 max-w-7xl mx-auto">
-
-
-<h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 mb-5 leading-tight">
-  Book Advertising Approach –{" "}
-  <span className="bg-(--main-color) bg-clip-text text-transparent">
-    That Is Hard To Miss
-  </span>
-</h1>
-
-        
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 mb-5 leading-tight">
+          Book Advertising Approach –{" "}
+          <span className="bg-(--main-color) bg-clip-text text-transparent">
+            That Is Hard To Miss
+          </span>
+        </h1>
       </div>
 
       {/* Cards Grid */}
