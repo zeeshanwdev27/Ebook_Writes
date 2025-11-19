@@ -1,7 +1,7 @@
 import React from 'react'
 import HomeBottomSection from './HomeBottomSection';
 
-function MainHome() {
+function MainHome({title, header, description}) {
   return (
     <>
    
@@ -9,14 +9,14 @@ function MainHome() {
       
       {/* Left Content */}
       <div className='flex flex-col gap-6 max-w-lg text-center lg:text-left mb-8 lg:mb-0'>
-        <p className='text-lg font-semibold text-blue-200'>Your Story. Our Expertise</p>
+        <p className='text-lg font-semibold text-blue-200'>{title}</p>
 
         <h1 className='text-3xl lg:text-4xl font-bold leading-tight'>
-          Book Publishers in New York – A Bestseller Awaits.
+          {header}
         </h1>
 
         <p className='text-gray-200 leading-relaxed'>
-          As experts in book writing, publishing, and marketing, NY Publishers is your one-stop shop for all your book publishing services needs. We offer end-to-end solutions that will help you transform your manuscript into a bestseller, leaving a lasting impact on your readers. With personalized pricing packages and discount bundles you can get the best of what you desire!
+          {description}
         </p>
 
         <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
