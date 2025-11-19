@@ -115,7 +115,7 @@ function MbOverlay({ isOpen, setIsOpen }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div 
-          className="fixed inset-0 z-[60] md:hidden"
+          className="fixed inset-0 z-[60] lg:hidden"
           onClick={handleBackdropClick}
           initial="closed"
           animate="open"
@@ -197,7 +197,7 @@ function MbOverlay({ isOpen, setIsOpen }) {
             </div>
 
             {/* Optional: Call to Action Buttons */}
-            <div className="flex-shrink-0 p-4 border-t border-gray-100 space-y-3">
+            <div className="flex-shrink-0 p-4 border-t border-gray-100 space-y-3 w-full md:max-w-2xl md:mx-auto">
               <Link
                 to="/contact-us"
                 onClick={handleLinkClick}
