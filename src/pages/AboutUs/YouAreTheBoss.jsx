@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Crown, PenTool, CheckCircle, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function YouAreTheBoss() {
   const genres = [
@@ -147,13 +148,13 @@ function YouAreTheBoss() {
             whileTap={{ scale: 0.95 }}
             className="inline-block"
           >
-            <a
-              href="tel:+1-929-224-9924"
+            <Link to="tel:+5512884168"
+
               className="bg-white text-(--main-color) px-8 py-4 rounded-xl font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center gap-3"
             >
-              <span>Call Now: +1-929-224-9924</span>
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            </a>
+              <span>Call Now: +551-288-4168</span>
+              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+            </Link>
           </motion.div>
           <p className="text-black mt-4 text-sm">Toll Free • 24/7 Available</p>
         </motion.div>
