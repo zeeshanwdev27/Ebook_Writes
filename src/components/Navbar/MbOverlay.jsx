@@ -135,9 +135,9 @@ function MbOverlay({ isOpen, setIsOpen }) {
             <div className="flex-shrink-0 flex items-center justify-end p-3 border-b border-gray-100">
               <button
                 onClick={handleLinkClick}
-                className="mt-1 p-3 rounded-2xl bg-gradient-to-r from-gray-50 to-gray-100/50 hover:from-indigo-50 hover:to-purple-50/30 border border-gray-200/60 hover:border-indigo-200 transition-all duration-300 active:scale-95 mr-4"
+                className="mt-1 p-3 rounded-2xl bg-gradient-to-r from-gray-50 to-gray-100/50 hover:from-indigo-50 hover:to-purple-50/30 border border-gray-200/60 hover:border-indigo-200 transition-all duration-300 active:scale-95 mr-2"
               >
-                <X className="w-5 h-5 text-gray-700" />
+                <X className="w-5 h-5 text-black" />
               </button>
             </div>
 
@@ -169,7 +169,7 @@ function MbOverlay({ isOpen, setIsOpen }) {
                                 key={subIndex}
                                 to={subItem.path}
                                 onClick={handleLinkClick}
-                                className="block p-3 rounded-lg bg-gray-50 hover:bg-indigo-100 border border-gray-100 hover:border-indigo-200 transition-all duration-300 group w-full"
+                                className="block p-3 rounded-lg bg-orange-50 hover:bg-orange-100 border border-orange-100 hover:border-orange-200 transition-all duration-300 group w-full"
                               >
                                 <span className="text-gray-700 group-hover:text-indigo-700 font-medium text-sm whitespace-nowrap overflow-hidden text-ellipsis">
                                   {subItem.text}

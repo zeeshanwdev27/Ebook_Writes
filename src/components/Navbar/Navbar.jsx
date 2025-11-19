@@ -11,8 +11,8 @@ function Navbar() {
   };
 
   return (
-    <div className="py-5 w-full">
-      <div className="flex justify-between items-center px-4 md:px-8 lg:justify-evenly">
+    <div className="py-5 w-full fixed top-0 left-0 z-999 bg-white shadow-md">
+      <div className="flex justify-between items-center px-6 md:px-8 lg:justify-evenly">
         {/* Logo */}
         <Link to={"/"}>
           <img
@@ -24,7 +24,7 @@ function Navbar() {
 
         {/* Hamburger Menu for medium and small screens */}
         <button
-          className="lg:hidden flex flex-col justify-center items-center w-8 h-8 mr-5"
+          className="lg:hidden flex flex-col justify-center items-center w-8 h-8"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -100,22 +100,18 @@ function Navbar() {
 
         {/* Call To Action - Hidden on small/medium, visible on large */}
         <div className="hidden lg:flex justify-center items-center gap-4">
-          {/* <button className="flex items-center gap-2  transition-colors duration-200 text-(--main-color) border border-(--main-color) px-2 py-3 rounded-md hover:bg-(--main-color) hover:text-white">
-            <Phone size={16} />
-            +000 000 0000
-          </button> */}
-<a 
-  href="#" 
-  className="group flex items-center gap-3 px-5 py-3 rounded-md  border border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-lg"
->
-  <div className="relative">
-    <Phone className="w-5 h-5 text-orange-500" />
-    <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-orange-400 rounded-full animate-ping"></div>
-  </div>
-  <span className="text-orange-500  font-semibold text-sm">
-    +1 (917) 765-8780
-  </span>
-</a>
+          <a
+            href="#"
+            className="group flex items-center gap-3 px-5 py-3 rounded-md  border border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <div className="relative">
+              <Phone className="w-5 h-5 text-orange-500" />
+              <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-orange-400 rounded-full animate-ping"></div>
+            </div>
+            <span className="text-orange-500  font-semibold text-sm">
+              +1 (917) 765-8780
+            </span>
+          </a>
           <button className="cursor-pointer px-6 py-3 rounded-md border border-(--main-color) bg-(--main-color) text-white hover:bg-transparent hover:text-(--main-color) transition-all duration-200 font-medium">
             Chat With Us
           </button>
