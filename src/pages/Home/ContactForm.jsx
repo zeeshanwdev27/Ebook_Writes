@@ -1,6 +1,7 @@
 import React from "react";
 import { MessageSquare, Phone, Mail, ChevronDown } from "lucide-react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function ContactForm() {
   return (
@@ -18,75 +19,111 @@ function ContactForm() {
 
       {/* Contact Form */}
       <div className="bg-white w-full max-w-4xl rounded-2xl p-8 shadow-xl border border-gray-100">
-        <form className="flex flex-col gap-6">
-          {/* Name and Phone Row */}
+        <form
+          className="flex flex-col gap-6"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+
+            try {
+              const response = await fetch(
+                "https://ebookwrites.com/sendmail.php",
+                {
+                  method: "POST",
+                  body: formData,
+                }
+              );
+
+              const result = await response.text();
+
+              if (result.includes("success")) {
+                Swal.fire({
+                  icon: "success",
+                  title: "Message Send!",
+                  text: "🎉 Thank you! Message Send Successfully.",
+                  confirmButtonColor: "#FBBF24",
+                });
+                e.target.reset();
+              } else if (result.includes("invalid_email")) {
+                Swal.fire({
+                  icon: "warning",
+                  title: "Invalid Email",
+                  text: "⚠️ Please enter a valid email address.",
+                  confirmButtonColor: "#FBBF24",
+                });
+                e.target.reset();
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "❌ Something went wrong. Please try again later.",
+                  confirmButtonColor: "#FBBF24",
+                });
+                e.target.reset();
+              }
+            } catch (error) {
+              Swal.fire({
+                icon: "error",
+                title: "Network Error",
+                text: "🚨 Please check your connection and try again.",
+                confirmButtonColor: "#FBBF24",
+              });
+              console.error(error);
+              e.target.reset();
+            }
+          }}
+        >
+          {/* Name & Phone */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
-              <label
-                htmlFor="name"
-                className="text-sm font-medium text-gray-700"
-              >
-                Full Name *
-              </label>
+              <label htmlFor="name">Full Name *</label>
               <input
                 id="name"
+                name="name"
                 type="text"
                 placeholder="Enter your full name"
-                className="border border-(--main-color) p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--main-color) focus:border-transparent transition-all duration-200"
+                className="border border-[var(--main-color)] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)] focus:border-transparent transition-all duration-200"
                 required
               />
             </div>
+
             <div className="flex flex-col gap-2">
-              <label
-                htmlFor="phone"
-                className="text-sm font-medium text-gray-700"
-              >
-                Phone Number
-              </label>
+              <label htmlFor="phone">Phone Number</label>
               <input
                 id="phone"
+                name="phone"
                 type="tel"
                 placeholder="Enter your phone number"
-                className="border border-(--main-color) p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--main-color) focus:border-transparent transition-all duration-200"
+                className="border border-[var(--main-color)] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)] focus:border-transparent transition-all duration-200"
               />
             </div>
           </div>
 
-          {/* Email and Message Row */}
+          {/* Email & Service */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
-              <label
-                htmlFor="email"
-                className="text-sm font-medium text-gray-700"
-              >
-                Email Address *
-              </label>
+              <label htmlFor="email">Email Address *</label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="Enter your email address"
-                className="border border-(--main-color) p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--main-color) focus:border-transparent transition-all duration-200"
+                className="border border-[var(--main-color)] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)] focus:border-transparent transition-all duration-200"
                 required
               />
             </div>
 
-            {/* Options Field */}
             <div className="flex flex-col gap-2">
-              <label
-                htmlFor="service"
-                className="text-sm font-medium text-gray-700"
-              >
-                Select Service
-              </label>
+              <label htmlFor="service">Select Service</label>
               <div className="relative">
                 <select
                   id="service"
-                  className="w-full border border-(--main-color) p-3 rounded-lg focus:outline-none 
-                 focus:ring-2 focus:ring-(--main-color) focus:border-transparent 
-                 transition-all duration-200 bg-white appearance-none cursor-pointer pr-10"
-                  defaultValue=""
+                  name="service"
+                  className="w-full border border-[var(--main-color)] p-3 rounded-lg focus:outline-none 
+          focus:ring-2 focus:ring-[var(--main-color)] focus:border-transparent 
+          transition-all duration-200 bg-white appearance-none cursor-pointer pr-10"
                 >
-                  <option value="" disabled>
+                  <option value="" disabled selected defaultValue="">
                     Choose a service...
                   </option>
                   <option value="book-writing">Book Writing</option>
@@ -100,34 +137,32 @@ function ContactForm() {
                     Ebook Writing & Publishing
                   </option>
                 </select>
+
                 <ChevronDown
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-(--main-color) pointer-events-none"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[var(--main-color)] pointer-events-none"
                   size={20}
                 />
               </div>
             </div>
           </div>
 
+          {/* Message */}
           <div className="flex flex-col gap-2">
-            <label
-              htmlFor="message"
-              className="text-sm font-medium text-gray-700"
-            >
-              Message *
-            </label>
+            <label htmlFor="message">Message *</label>
             <textarea
               id="message"
-              placeholder="Tell us about your project or inquiry..."
+              name="message"
               rows={4}
-              className="border border-(--main-color) p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--main-color) focus:border-transparent transition-all duration-200 resize-vertical"
+              placeholder="Tell us about your project or inquiry..."
+              className="border border-[var(--main-color)] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--main-color)] focus:border-transparent transition-all duration-200 resize-vertical"
               required
             />
           </div>
 
-          {/* Submit Button */}
+          {/* Submit */}
           <button
             type="submit"
-            className="p-4 text-lg font-semibold rounded-lg bg-(--main-color) text-white hover:bg-(--main-color)/90 transform hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
+            className="p-4 text-lg font-semibold rounded-lg bg-[var(--main-color)] text-white hover:bg-[var(--main-color)]/90 transform hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
           >
             Send Message
           </button>
@@ -161,9 +196,9 @@ function ContactForm() {
             </div>
             <p className="font-semibold text-gray-700 mb-3">Make a Call</p>
             <Link to="tel:+5512884168">
-            <button className="cursor-pointer w-full bg-transparent border border-(--main-color) rounded-xl p-4 text-lg font-medium text-(--main-color) hover:bg-(--main-color) hover:text-white transition-all duration-300 group-hover:shadow-md">
-              +551-288-4168
-            </button>
+              <button className="cursor-pointer w-full bg-transparent border border-(--main-color) rounded-xl p-4 text-lg font-medium text-(--main-color) hover:bg-(--main-color) hover:text-white transition-all duration-300 group-hover:shadow-md">
+                +551-288-4168
+              </button>
             </Link>
           </div>
         </div>
@@ -177,9 +212,9 @@ function ContactForm() {
             </div>
             <p className="font-semibold text-gray-700 mb-3">Send us Email</p>
             <Link to="mailto:info@ebookwrites.com">
-            <button className="cursor-pointer w-full bg-transparent border border-(--main-color) rounded-xl p-4 text-lg font-medium text-(--main-color) hover:bg-(--main-color) hover:text-white transition-all duration-300 group-hover:shadow-md">
-              Info@ebookwrites.com
-            </button>
+              <button className="cursor-pointer w-full bg-transparent border border-(--main-color) rounded-xl p-4 text-lg font-medium text-(--main-color) hover:bg-(--main-color) hover:text-white transition-all duration-300 group-hover:shadow-md">
+                Info@ebookwrites.com
+              </button>
             </Link>
           </div>
         </div>
