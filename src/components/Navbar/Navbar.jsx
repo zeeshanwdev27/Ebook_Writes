@@ -80,11 +80,11 @@ function Navbar() {
               </li>
             </ul>
           </li>
-          <li className="hover:text-(--main-color) cursor-pointer transition-colors">
+          {/* <li className="hover:text-(--main-color) cursor-pointer transition-colors">
             Portfolio
-          </li>
+          </li> */}
           <li className="hover:text-(--main-color) cursor-pointer transition-colors">
-            Testimonials
+            <Link to={'/testimonials/'}>Testimonials</Link>
           </li>
           <li className="hover:text-(--main-color) cursor-pointer transition-colors">
             About Us
