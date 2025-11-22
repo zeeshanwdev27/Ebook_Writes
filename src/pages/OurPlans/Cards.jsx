@@ -21,14 +21,14 @@ function Cards() {
             expert: {
                 title: 'Expert Package',
                 tags: ['Social Media Promotion for six months', 'Amazon Optimization for six months', 'Video Reviews – 5x', 'Author\'s Spotlight - 3x', 'Blog and Articles – 10x (Posted on DA 30+ websites)', 'Press Release – 4x (200+ media outlets)', 'Detailed Targeting', 'Geo Specific Targeting'],
-                price: '$2,200',
-                discountedPrice: '$1,600'
+                price: '$3,500',
+                discountedPrice: '$2,900'
             },
             ghostwriting: {
                 title: 'GHOSTWRITING Package',
                 tags: ['The chief ghostwriter will be an Extensively Published Author (15 Years experience)', 'Procedure includes a detailed strategy-building and implementing session to create an outline for your book', 'Ghostwriting original content based on interviews or research.', 'Developmental Editing (Also called: conceptual editing or manuscript appraisal.)', 'Evaluation Editing (Also called: manuscript critique or structural editing.)', 'Content Editing (Also called: substantive editing or full editing.)', 'Line Editing (Also called: stylistic editing or comprehensive editing.)', 'Proofreading', 'Pagination', 'Formatting and typesetting.', 'Access to an online portal', 'Unlimited Revisions', 'Premium Support'],
                 price: '$1699',
-                discountedPrice: '65% Discount'
+                
             },
             standard: {
                 title: 'Standard Publishing Package',

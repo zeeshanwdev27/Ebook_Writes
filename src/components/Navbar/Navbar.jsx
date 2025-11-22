@@ -116,6 +116,17 @@ function Navbar() {
             </ul>
           </li>
 
+                    <li className="cursor-pointer transition-colors">
+            <NavLink
+              to="/ourplans"
+              className={({ isActive }) =>
+                isActive ? "text-(--main-color)" : "hover:text-(--main-color)"
+              }
+            >
+              Our Plans
+            </NavLink>
+          </li>
+
           <li className="cursor-pointer transition-colors">
             <NavLink
               to="/testimonials/"
@@ -148,18 +159,6 @@ function Navbar() {
               Contact Us
             </NavLink>
           </li>
-
-          <li className="cursor-pointer transition-colors">
-            <NavLink
-              to="/ourplans"
-              className={({ isActive }) =>
-                isActive ? "text-(--main-color)" : "hover:text-(--main-color)"
-              }
-            >
-              Our Plans
-            </NavLink>
-          </li>
-
 
         </ul>
 
