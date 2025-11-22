@@ -148,11 +148,11 @@ function YouAreTheBoss() {
             whileTap={{ scale: 0.95 }}
             className="inline-block"
           >
-            <Link to="tel:+5512884168"
+            <Link to="tel:+15512884168"
 
               className="bg-white text-(--main-color) px-8 py-4 rounded-xl font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-200 inline-flex items-center gap-3"
             >
-              <span>Call Now: +551-288-4168</span>
+              <span>Call Now: +1-551-288-4168</span>
               <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
             </Link>
           </motion.div>

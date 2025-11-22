@@ -9,6 +9,7 @@ const BookPublishing = React.lazy(()=> import('./pages/BookPublishing/BookPublis
 const Testimonials = React.lazy(()=> import('./pages/Testimonials/Testimonials.jsx'))
 const AboutUs = React.lazy(()=> import('./pages/AboutUs/AboutUs.jsx'))
 const ContactUs = React.lazy(()=> import('./pages/ContactUs/ContactUs.jsx'))
+const OurPlans = React.lazy(()=> import('./pages/OurPlans/OurPlans.jsx'))
 
 
 
@@ -24,6 +25,7 @@ const App = createBrowserRouter(
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/ourplans" element={<OurPlans />} />
         
       </Route>
     </>

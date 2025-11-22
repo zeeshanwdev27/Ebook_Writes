@@ -30,7 +30,7 @@ function Footer() {
               </div>
               <div className="flex items-center justify-center lg:justify-start text-sm sm:text-sm text-gray-600">
                 <Phone className="w-4 h-4 mr-2 shrink-0" />
-                <span>551-288-4168</span>
+                <span>+1-551-288-4168</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start text-sm sm:text-sm text-gray-600">
                 <Mail className="w-4 h-4 mr-2 shrink-0" />

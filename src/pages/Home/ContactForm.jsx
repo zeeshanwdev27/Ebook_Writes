@@ -195,9 +195,9 @@ function ContactForm() {
               </span>
             </div>
             <p className="font-semibold text-gray-700 mb-3">Make a Call</p>
-            <Link to="tel:+5512884168">
+            <Link to="tel:+15512884168">
               <button className="cursor-pointer w-full bg-transparent border border-(--main-color) rounded-xl p-4 text-lg font-medium text-(--main-color) hover:bg-(--main-color) hover:text-white transition-all duration-300 group-hover:shadow-md">
-                +551-288-4168
+                +1-551-288-4168
               </button>
             </Link>
           </div>
